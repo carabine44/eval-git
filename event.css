@@ -67,4 +67,23 @@
 .btn:focus {
   background: #1342a8;
 }
+
+@media (max-width: 600px) {
+  .events {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .events-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .event-card {
+    padding: 1rem;
+  }
+
+  .event-title {
+    overflow-wrap: anywhere;
+  }
+}
  
