@@ -4,33 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form>
-        <section id="formulaire">
+    <form id="formulaire">
             <div>
-            <p>Nom</p>
-            <input type="text" name="nom" id="nom">
-            <p>Prénom</p>
-            <input type="text" name="prenom" id="prenom">
-            <p>Département</p>
-            <input type="text" name="departement" id="departement">
-            <p>Adresse mail</p>
-            <input type="email" name="mail" id="mail">  
-            <p>Téléphone</p>
-            <input type="tel" name="telephone" id="telephone">
+                <p>Nom</p>
+                <input type="text" name="nom" id="nom">
+                <p>Prénom</p>
+                <input type="text" name="prenom" id="prenom">
+                <p>Département</p>
+                <input type="text" name="departement" id="departement">
+                <p>Adresse mail</p>
+                <input type="email" name="mail" id="mail">
+                <p>Téléphone</p>
+                <input type="tel" name="telephone" id="telephone">
+            </div>
+            <div>
+                <label for="choix">Choix</label>
+                <select name="choix" id="choix">
+                    <option value="">Sélectionner</option>
+                    <option value="1">Soirée d'intégration</option>
+                    <option value="2">Tournoi de jeux vidéo</option>
+                    <option value="3">Conférence : métiers du numérique</option>
+                </select>
+                <script>
+                    const id = new URLSearchParams(window.location.search).get("id");
+                    if (id) {
+                        document.querySelector("#choix").value = id;
+                    }
+                </script>
+            </div>
+            <div></div>
             <p>Message</p>
             <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            <div>
-                <input type="submit" value="Envoyer">  
-            </div>   
-            </div>  
-            <div>
+                <input type="submit" value="Envoyer">
             </div>
-        </section>
     </form>
 
 </body>
