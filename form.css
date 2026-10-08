@@ -97,3 +97,29 @@ body {
   transform: translateY(1px);
 }
 
+@media (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+    align-items: flex-start;
+  }
+
+  #formulaire {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  #formulaire > div:first-child,
+  #formulaire > div:nth-child(2) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  #formulaire textarea {
+    min-height: 120px;
+  }
+
+  #formulaire input[type="submit"] {
+    width: 100%;
+  }
+}
+
