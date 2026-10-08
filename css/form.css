@@ -11,13 +11,12 @@
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 40px 16px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 #formulaire {
+  margin: 40px auto;
   width: min(100%, 680px);
   padding: 32px;
   display: flex;
@@ -98,12 +97,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: 20px 12px;
-    align-items: flex-start;
-  }
-
   #formulaire {
+    margin: 20px 12px;
     padding: 20px 16px;
     gap: 16px;
   }
